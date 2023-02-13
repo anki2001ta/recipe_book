@@ -1,5 +1,5 @@
 import {reducer as AuthReducer} from "./Authentication/Reducer"
-import {reducer as RecipeReducer} from "./Recipe/Reducer"
+import { RecipeReducer} from "./Recipe/Reducer"
 import {
   legacy_createStore,
   applyMiddleware,
