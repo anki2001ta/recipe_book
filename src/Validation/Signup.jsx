@@ -13,9 +13,8 @@ import {
 } from "@chakra-ui/react";
 import { useDispatch} from "react-redux";
 import { getAuthRequest, getAuthSuccess} from "../Redux/Authentication/Action";
-
 import { useNavigate } from "react-router-dom";
-import { Navigate } from "react-router-dom";
+
 
 const initMsg = {
   status: false,

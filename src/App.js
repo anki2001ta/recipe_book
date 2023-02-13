@@ -3,6 +3,7 @@ import './App.css';
 import Homepage from './Pages/Homepage';
 import AllRoutes from './Routes/AllRoutes';
 import Navbar from './Components/Navbar';
+import Foodspage from './Pages/Food';
 
 
 
@@ -11,7 +12,8 @@ function App() {
     <div className="App">
       {/* <Homepage/> */}
      {/* <AllRoutes/> */}
-     <Navbar/>
+     {/* <Navbar/> */}
+     <Foodspage/>
       {/* <Signup/> */}
     </div>
   );
