@@ -88,9 +88,8 @@ export default function Signup() {
       setMsg({ status: true, notice: "Please enter your OTP!" });
     } else if (inputOtp == otp) {
      let payload={token:otp}
-     
-     navigate("/login");
      dispatch(getAuthSuccess(payload))
+     navigate("/register");
     //  return <Navigate to="/login"/>
      
     } else {
@@ -103,7 +102,7 @@ export default function Signup() {
       <br />
       <br />
       <Box w="90%" m="auto" display={{ lg:"flex"}}>
-        <Image margin={{md:"auto",lg:"0px"}} src="https://www.jiomart.com/msassets/images/login-banner.jpg" />
+        <Image h={{lg:"600px"}} w={{lg:"600px"}} margin={{md:"auto",lg:"0px"}} src="https://indiater.com/wp-content/uploads/2019/11/food-banner-design-template-free-psd-download-990x990.jpg" />
         <Box ml={{base:"15px",md:"80px",lg:"200px"}} mt="100px">
           <Text fontSize="27px" fontWeight="bold">
             Sign in

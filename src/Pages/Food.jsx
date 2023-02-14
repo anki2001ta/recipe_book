@@ -6,6 +6,7 @@ import { GetProductRequest, GetProductcatSuccess } from '../Redux/Recipe/Action'
 import Navbar from "../Components/Navbar"
 import "./button.css"
 import Autocrausel from './Autocarausal'
+import { useSearchParams } from 'react-router-dom'
 
 
 
@@ -15,7 +16,7 @@ const Foodspage = () => {
     const [loading, setLoading] = useState(false)
     const dispatch = useDispatch()
     const Data = useSelector((store) => store.RecipeReducer.Product)
-
+    const {id} = useSearchParams();
     const catproduct = () => {
         dispatch(GetProductRequest())
         axios.get("https://peppermint-alive-acrylic.glitch.me/recipe")
@@ -25,10 +26,14 @@ const Foodspage = () => {
             })
     };
 
+    const handleDataid=()=>{
+        localStorage.setItem("Datas", JSON.stringify(id))
+    }
+
     useEffect(() => {
-        // setLoading(true)
+        
         catproduct()
-        // setLoading(false)
+        
     }, [])
     return (
         <div className='Product_page'>
@@ -69,7 +74,7 @@ const Foodspage = () => {
                                             <Text mt={"15px"} textAlign={"left"} fontWeight={800}><span style={{ color: "red", fontFamily: "sans-serif", fontSize: "20px" }}>Link:</span>{item.recipe_link}</Text>
                                         <Center>
                                         </Center>
-                                        <button className="button-53">ADD RECIPE IN MY PLATE</button>
+                                        <button onClick={handleDataid}className="button-53">ADD RECIPE IN MY PLATE</button>
                                     </Box>
                                 </Grid>
                                 </Box>

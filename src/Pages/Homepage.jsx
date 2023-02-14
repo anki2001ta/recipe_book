@@ -1,14 +1,13 @@
 
 import React from 'react'
 import { useSelector } from 'react-redux'
+import Foodspage from './Food'
 
 const Homepage = () => {
-    const userData=useSelector((store)=>store.AuthReducer.userData)
-    console.log(userData)
+    
   return (
     <div>
-        Homepage
-      
+      <Foodspage/>
         {/* <Navbar/> */}
         {/* <Signup/> */}
     </div>

@@ -4,6 +4,7 @@ import Homepage from './Pages/Homepage';
 import AllRoutes from './Routes/AllRoutes';
 import Navbar from './Components/Navbar';
 import Foodspage from './Pages/Food';
+import Signup from './Validation/Signup';
 
 
 
@@ -13,8 +14,8 @@ function App() {
       {/* <Homepage/> */}
      {/* <AllRoutes/> */}
      {/* <Navbar/> */}
-     <Foodspage/>
-      {/* <Signup/> */}
+     {/* <Foodspage/> */}
+     <AllRoutes/>
     </div>
   );
 }

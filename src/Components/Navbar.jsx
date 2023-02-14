@@ -18,6 +18,8 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon ,Search2Icon} from '@chakra-ui/icons';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 
 const NavLink = () => (
@@ -35,8 +37,17 @@ const NavLink = () => (
 );
 
 export default function Nav() {
+    const navigate = useNavigate();
   const { colorMode, toggleColorMode } = useColorMode();
+  let userData=useSelector((store)=>store.AuthReducer.userData)
+  const handlelogout=()=>{
+    userData={}
+    navigate("/login")
+  };
 
+  const handleremedi=()=>{
+    navigate("/singlepage")
+  }
   return (
     <>
       <Box bg={useColorModeValue('teal', 'teal')} px={4}>
@@ -64,13 +75,15 @@ export default function Nav() {
                   rounded={'full'}
                   variant={'link'}
                   cursor={'pointer'}
-                  minW={0}>
+                  minW={0}
+                  zIndex={2000}>
                   <Avatar
                     size={'sm'}
                     src={'https://w7.pngwing.com/pngs/754/2/png-transparent-samsung-galaxy-a8-a8-user-login-telephone-avatar-pawn-blue-angle-sphere-thumbnail.png'}
                   />
                 </MenuButton>
-                <MenuList alignItems={'center'}>
+                <MenuList alignItems={'center'}
+               zIndex={2000} >
                   <br />
                   <Center>
                     <Avatar
@@ -80,13 +93,13 @@ export default function Nav() {
                   </Center>
                   <br />
                   <Center>
-                    <p>Username</p>
+                    <p>{userData?.firstName==undefined?"Guest":`${userData.firstName} ${userData.lastName}`}</p>
                   </Center>
                   <br />
                   <MenuDivider />
                   <MenuItem>My Account</MenuItem>
-                  <MenuItem>My Recipes</MenuItem>
-                  <MenuItem>Logout</MenuItem>
+                  <MenuItem onClick={handleremedi}>My Recipes</MenuItem>
+                  <MenuItem onClick={handlelogout}>Logout</MenuItem>
                 </MenuList>
               </Menu>
             </Stack>

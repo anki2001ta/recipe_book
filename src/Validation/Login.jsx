@@ -13,9 +13,8 @@ import {
   Checkbox,
   FormControl,
 } from "@chakra-ui/react";
-import { Navigate } from "react-router";
+
 import { FaWhatsappSquare } from "react-icons/fa";
-import { BsFillPatchCheckFill } from "react-icons/bs";
 import { useNavigate } from "react-router";
 import { useDispatch} from "react-redux";
 
@@ -100,8 +99,9 @@ const Login= () => {
       <Box w="90%" m={"auto"} display={{ lg:"flex"}}>
         <Image
           margin={{md:"auto",lg:"0px"}}
-          h={600}
-          src="https://www.jiomart.com/msassets/images/login-banner.jpg"
+          
+          h={{lg:"600px"}} w={{lg:"600px"}} 
+          src="https://indiater.com/wp-content/uploads/2019/11/food-banner-design-template-free-psd-download-990x990.jpg"
         />
         <Box ml={{base:"15px",md:"40px",lg:"200px"}} mt="100px">
           <Text fontSize="27px" fontWeight="bold">
@@ -230,10 +230,7 @@ const Login= () => {
               </Box>
             </Flex>
 
-            <Text as={"span"}  mb={"10px"} fontSize="14px" color="##e3c6b0">
-              This Phone Number is already Verified{" "}
-              <Text as={"b"}>+91-{value}</Text>{" "}
-            </Text>
+           
 
             <Button
               ml={{md:10}}
