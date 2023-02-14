@@ -67,7 +67,7 @@ Technologies used in the project:
 
 Clone the project
 ```bash
-git clone https://github.com/ajayahara/JIOMART.COM_RCT_201.git
+git clone https://github.com/anki2001ta/recipe_book.git
 ```
 ## Client-side usage
 
