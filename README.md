@@ -1,5 +1,5 @@
 <h1 align="center" id="title">Recipe Book</h1>
-Recipe Book help us to get the recipe, Ingredients , flavours of some of the International Cuisines 
+Recipe Book help us to get the recipe, Ingredients , flavours of some of the Indin and International Cuisines 
 
 
 
