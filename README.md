@@ -87,5 +87,5 @@ $ npm run build  // this will compile the react code using webpack and generate 
 ##
 
 
-This project was built during our construct week at Masai School. It was built by a team of 4 developers and executed in 6 days.
+
        
